@@ -1,0 +1,44 @@
+.accordion-button
+        {
+            width: 85%;
+        }
+        .accordion-header
+        {
+            display: flex;
+            align-items: center;
+        }
+        .icons
+        {
+            margin-left: 20px;
+        }
+
+        .icons i {
+            margin-left: 5px;
+            color: gray;
+        }
+
+
+        body{
+            background-color: beige;
+            
+        }
+
+        a {
+            text-decoration: none;
+            
+        }
+
+        .fa-check
+        {
+            color: green !important;
+        }
+
+        .done 
+        {
+            text-decoration: line-through;
+        }
+
+        .fa-rotate-left
+        {
+            color: red !important;
+        }

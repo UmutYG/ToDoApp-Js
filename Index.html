@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+    <blockquote class="blockquote text-center">
+  <p class="mt-1" id="quote"></p>
+  <footer class="blockquote-footer mt-2" id="author"><cite title="Source Title"></cite></footer>
+</blockquote>
+  <div class="container mt-3">
+      <p class="card-text fs-4">ToDoApp</p>
+      <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Add Task" aria-label="Recipient's username" id="input">
+          <button class="btn btn-outline-secondary" onclick="manageTasks()" type="button" id="button-add">Add</button>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Add Description" aria-label="Recipient's username" id="inputDesc">
+        </div>
+        <ul class="list-group list-group-horizontal mb-3">
+          <li class="list-group-item"><a href="#">All</a></li>
+          <li class="list-group-item"><a href="#">Pending</a></li>
+          <li class="list-group-item"><a href="#">Completed</a></li>
+        </ul>
+      <div class="accordion" id="mainAccordion">
+          <!-- filled with tasks -->
+          <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a${task.TaskId}" aria-expanded="true" aria-controls="collapseOne">
+                    
+                      </button>
+                      <div class="icons">
+                          <a href="#" onclick="editTask()"><i class="fa-solid fa-pen-to-square fa-sm"></i></a>
+                          <a href="#" onclick="deleteTask()"><i class="fa-solid fa-trash fa-sm"></i></a>
+                          <a href="#" id="status" onclick="finishTask()"><i class="${statusIcon}"></i></a>
+                          
+                      </div>
+                  </h2>
+                  <div id="a${task.id}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        
+                      </div>
+                  </div>
+              </div>
+        
+    </div>
+  </div>
+  <script src="/js/variables.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/taskManager.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+ 
